@@ -360,6 +360,7 @@ input[type="range"] {
     left: 0;
     width: 100%;
     height: 100%;
+
     opacity: 0;
     cursor: ew-resize;
     z-index: 4;
@@ -388,4 +389,227 @@ input[type="range"] {
     }
 
     /* Could add hamburger later */
+}
+
+/* V2.0 Components */
+
+/* Weaknesses Table */
+.data-table-container {
+    overflow-x: auto;
+    margin: 2rem 0 4rem 0;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    min-width: 600px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.data-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-neon);
+    font-weight: 700;
+}
+
+.data-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.impact-negative {
+    color: #ff4444;
+}
+
+.impact-positive {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+/* Sticky Competitor Sidebar (Desktop) */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.main-content {
+    flex: 1;
+    max-width: 900px;
+    /* Prevent being too wide */
+}
+
+.competitor-sidebar {
+    width: 300px;
+    position: sticky;
+    top: 100px;
+    /* Below nav */
+    height: fit-content;
+    background: rgba(10, 10, 25, 0.9);
+    border: 1px solid var(--glass-border);
+    border-left: 2px solid #ff4444;
+    /* Aggressive color */
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: none;
+    /* Hidden on mobile by default */
+}
+
+.sidebar-header {
+    color: #ff4444;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.competitor-item {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.competitor-name {
+    font-weight: bold;
+    opacity: 0.8;
+    margin-bottom: 0.2rem;
+}
+
+.competitor-stat {
+    color: #888;
+    text-decoration: line-through;
+}
+
+.our-edge {
+    color: #00ff88;
+    display: block;
+    margin-top: 0.2rem;
+    font-weight: bold;
+}
+
+/* Timeline (Collapsible) */
+.timeline-section {
+    background: var(--glass-bg);
+    border: 1px solid var(--secondary-neon);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.timeline-section:hover {
+    transform: scale(1.01);
+}
+
+.timeline-visual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.timeline-visual::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #666, var(--secondary-neon), #00ff88);
+    z-index: 0;
+}
+
+.timeline-node {
+    background: var(--bg-color);
+    border: 2px solid var(--secondary-neon);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+
+.timeline-label {
+    position: absolute;
+    top: 50px;
+    width: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* Modals */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.modal-content {
+    background: #0a0a19;
+    border: 1px solid var(--primary-neon);
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s;
+    box-shadow: 0 0 50px rgba(0, 243, 255, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.modal-open {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-open .modal-content {
+    transform: translateY(0);
+}
+
+/* Responsive Sidebar */
+@media (min-width: 1100px) {
+    .competitor-sidebar {
+        display: block;
+    }
 }
