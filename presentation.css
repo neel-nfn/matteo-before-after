@@ -1,0 +1,307 @@
+:root {
+    --bg-color: #050510;
+    --text-color: #ffffff;
+    --primary-neon: #00f3ff;
+    --secondary-neon: #bc13fe;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(10, 10, 25, 0.7);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.neon-text {
+    text-shadow: 0 0 10px var(--primary-neon), 0 0 20px var(--primary-neon);
+    color: var(--primary-neon);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, var(--primary-neon), var(--secondary-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(188, 19, 254, 0.1) 0%, transparent 70%);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    max-width: 600px;
+}
+
+/* Before/After Slider */
+.comparison-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    /* Adjust based on image aspect ratio */
+    margin: 0 auto;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+}
+
+.image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.before-image {
+    background-color: #1a1a1a;
+    /* Placeholder color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.after-image {
+    background-image: url('divorced_dads_redesign_mockup_1765367943539.png');
+    width: 50%;
+    /* Initial clip */
+    z-index: 2;
+    border-right: 2px solid var(--primary-neon);
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-neon);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 3;
+    cursor: ew-resize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+.slider-handle::after {
+    content: '< >';
+    color: #000;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 4;
+}
+
+/* Funnel Section */
+.funnel-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.funnel-graphic {
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.2);
+}
+
+/* Pricing Section */
+.pricing-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.15);
+    border-color: var(--primary-neon);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--primary-neon);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.price span {
+    font-size: 1rem;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.features-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.features-list li::before {
+    content: '✓';
+    color: var(--secondary-neon);
+    position: absolute;
+    left: 0;
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.badge-red {
+    background: rgba(255, 50, 50, 0.2);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+}
+
+.badge-green {
+    background: rgba(50, 255, 100, 0.2);
+    color: #00ff88;
+    border: 1px solid #00ff88;
+}
+
+.badge-popular {
+    background: var(--secondary-neon);
+    color: #fff;
+    border: 1px solid var(--secondary-neon);
+    box-shadow: 0 0 10px var(--secondary-neon);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+/* Option Sections */
+.tier-section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.tier-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tier-highlight {
+    border: 2px solid var(--secondary-neon);
+    background: linear-gradient(180deg, rgba(188, 19, 254, 0.1) 0%, rgba(10, 10, 25, 0) 100%);
+    box-shadow: 0 0 50px rgba(188, 19, 254, 0.1);
+    position: relative;
+    z-index: 10;
+    transform: scale(1.02);
+}
+
+/* Pricing Card Adjustments within Tier */
+.tier-pricing {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    background: var(--glass-bg);
+    padding: 2rem;
+    border-radius: 12px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divorced Dads Help - Transformation Plan</title>
+    <link rel="stylesheet" href="presentation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="container">
+            <h1 class="gradient-text">The Transformation Plan</h1>
+            <p>From "Just Another Site" to a <span class="neon-text">High-Performance Growth Engine</span>.</p>
+        </div>
+    </div>
+
+    <!-- Tier 1 -->
+    <div class="tier-section">
+        <div class="container">
+            <div class="tier-header">
+                <h2>Option 1: Quick Fix</h2>
+                <div class="price">$1,500 <span>/ one-time</span></div>
+                <p class="neon-text">The "Stop the Bleeding" Foundation</p>
+            </div>
+
+            <div class="slider-container" id="slider1">
+                <div class="image-wrapper before-image">
+                    <div>
+                        <span class="badge badge-red">LCP: 4.2s</span>
+                        <h3>Current Site</h3>
+                    </div>
+                </div>
+                <div class="image-wrapper after-image" id="afterImage1"
+                    style="background-image: url('divorced_dads_redesign_mockup_1765367943539.png');"></div>
+                <div class="slider-handle" id="sliderHandle1"></div>
+                <input type="range" min="0" max="100" value="50" oninput="updateSlider(1, this.value)">
+            </div>
+
+            <div class="tier-pricing">
+                <ul class="features-list">
+                    <li>Full Technical Fix (Speed)</li>
+                    <li>Basic On-Page SEO</li>
+                    <li>Analytics Setup</li>
+                    <li><strong>Est. 20-30% Traffic Boost</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 2 (Highlighted) -->
+    <div class="tier-section tier-highlight">
+        <div class="container">
+            <div class="tier-header">
+                <span class="badge badge-popular">Most Popular</span>
+                <h2 style="font-size: 2.5rem; color: var(--primary-neon);">Option 2: Growth Partner</h2>
+                <div class="price">$900 <span>/ month</span></div>
+                <p class="neon-text" style="font-size: 1.2rem;">Sustainable, Long-Term Authority</p>
+            </div>
+
+            <div class="slider-container" id="slider2"
+                style="border: 2px solid var(--secondary-neon); box-shadow: 0 0 40px rgba(188, 19, 254, 0.3);">
+                <div class="image-wrapper before-image">
+                    <div>
+                        <span class="badge badge-red">LCP: 4.2s</span>
+                        <h3>Current Site</h3>
+                    </div>
+                </div>
+                <div class="image-wrapper after-image" id="afterImage2"
+                    style="background-image: url('divorced_dads_redesign_mockup_1765367943539.png');"></div>
+                <div class="slider-handle" id="sliderHandle2"
+                    style="background: var(--secondary-neon); box-shadow: 0 0 20px var(--secondary-neon);"></div>
+                <input type="range" min="0" max="100" value="50" oninput="updateSlider(2, this.value)">
+            </div>
+
+            <div class="tier-pricing"
+                style="background: rgba(188, 19, 254, 0.1); border: 1px solid var(--secondary-neon);">
+                <ul class="features-list">
+                    <li><strong>Everything in Quick Fix</strong></li>
+                    <li>4 Blog Posts / Month (Dad Pain Points)</li>
+                    <li>"Search Everywhere" Setup</li>
+                    <li>Funnel Optimization</li>
+                    <li><strong>Est. 2-3x Leads</strong></li>
+                </ul>
+                <a href="#" class="cta-button"
+                    style="background: linear-gradient(90deg, var(--secondary-neon), var(--primary-neon)); font-size: 1.2rem; padding: 1.2rem;">Start
+                    with Growth Partner</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 3 -->
+    <div class="tier-section">
+        <div class="container">
+            <div class="tier-header">
+                <h2>Option 3: Aggressive Scale</h2>
+                <div class="price">$1,000 <span>/ month</span></div>
+                <p class="neon-text">Maximum Impact, Fastest Results</p>
+            </div>
+
+            <div class="slider-container" id="slider3">
+                <div class="image-wrapper before-image">
+                    <div>
+                        <span class="badge badge-red">LCP: 4.2s</span>
+                        <h3>Current Site</h3>
+                    </div>
+                </div>
+                <div class="image-wrapper after-image" id="afterImage3"
+                    style="background-image: url('divorced_dads_redesign_mockup_1765367943539.png');"></div>
+                <div class="slider-handle" id="sliderHandle3"></div>
+                <input type="range" min="0" max="100" value="50" oninput="updateSlider(3, this.value)">
+            </div>
+
+            <div class="tier-pricing">
+                <ul class="features-list">
+                    <li>Everything in Growth Partner</li>
+                    <li>Conversion Rate Optimization</li>
+                    <li>Competitor Attack Strategy</li>
+                    <li>Advanced Analytics</li>
+                    <li><strong>Est. +50% Conversion</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container funnel-section">
+        <h2>The Strategy: "Search Everywhere"</h2>
+        <p>Capturing dads wherever they are looking for help.</p>
+        <img src="search_everywhere_funnel_graphic_1765367972731.png" alt="Search Everywhere Funnel"
+            class="funnel-graphic">
+    </div>
+
+    <script>
+        function updateSlider(id, val) {
+            document.getElementById('afterImage' + id).style.width = val + '%';
+            document.getElementById('sliderHandle' + id).style.left = val + '%';
+        }
+    </script>
+
+</body>
+
+</html>
