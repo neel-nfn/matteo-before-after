@@ -4,144 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divorced Dads Help - Transformation Plan</title>
+    <title>Transformation Plan for Divorced Dads Help</title>
     <link rel="stylesheet" href="presentation.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="hero">
-        <div class="container">
-            <h1 class="gradient-text">The Transformation Plan</h1>
-            <p>From "Just Another Site" to a <span class="neon-text">High-Performance Growth Engine</span>.</p>
+    <!-- Module 1: Sticky Nav -->
+    <nav class="sticky-nav">
+        <a href="#" class="nav-logo">DivorcedDadsHelp <span class="neon-text">V2.0</span></a>
+        <div class="nav-links">
+            <a href="#vision">The Vision</a>
+            <a href="#strategy">The Strategy</a>
+            <a href="#offer">The Offer</a>
+            <a href="#contact">Start Now</a>
         </div>
-    </div>
+    </nav>
 
-    <!-- Tier 1 -->
-    <div class="tier-section">
+    <!-- Hero -->
+    <section class="hero">
         <div class="container">
-            <div class="tier-header">
-                <h2>Option 1: Content Foundation</h2>
-                <div class="price">$1,500 <span>/ one-time</span></div>
-                <p class="neon-text">The "30-Asset" Injection</p>
-            </div>
+            <h1 class="gradient-text">Divorced Dads Help: Transformation</h1>
+            <p style="font-size: 1.5rem; margin-top: 1rem;">From "Struggle" to <span class="neon-text">Success
+                    Funnel</span>.</p>
+            <p style="opacity: 0.7;">Empower Dads Post-Divorce with the Authority They Deserve.</p>
+            <a href="#offer" class="cta-button" style="margin-top: 2rem;">See Your Options</a>
+        </div>
+    </section>
 
-            <div class="slider-container" id="slider1">
-                <div class="image-wrapper before-image"
-                    style="background-image: url('before_site_proxy_1765570497005.png'); background-size: cover; background-position: top center;">
-                    <div style="position: absolute; top: 1rem; left: 1rem;">
-                        <span class="badge badge-red">LCP: 4.2s (Current)</span>
-                        <h3
-                            style="background: rgba(0,0,0,0.7); padding: 0.2rem 0.5rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem;">
-                            Current Site</h3>
+    <!-- Module 2: Visual Enhancements (Slider) -->
+    <section id="vision" class="container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2>The UX Evolution</h2>
+            <p>Drag to see the <span class="neon-text">LCP Fix (4.2s → 1.8s)</span></p>
+        </div>
+
+        <div class="slider-container">
+            <div class="image-wrapper before-image"
+                style="background-image: url('before_site_proxy_1765570497005.png');">
+                <div style="position: absolute; top: 1rem; left: 1rem;">
+                    <span class="badge badge-red">Current: Slow & Text Heavy</span>
+                </div>
+            </div>
+            <div class="image-wrapper after-image" id="afterImage1"
+                style="background-image: url('divorced_dads_redesign_mockup_1765367943539.png'); width: 50%;">
+                <div style="position: absolute; top: 1rem; right: 1rem; text-align: right;">
+                    <span class="badge badge-green">Future: Fast & Converting</span>
+                </div>
+            </div>
+            <div class="slider-handle" id="sliderHandle1" style="left: 50%;"></div>
+            <input type="range" min="0" max="100" value="50" oninput="updateSlider(1, this.value)">
+        </div>
+    </section>
+
+    <!-- Module 2 & 3: Interactive Funnel & Content -->
+    <section id="strategy" class="container" style="padding-top: 4rem;">
+        <h2 style="text-align: center;">The "Search Everywhere" Funnel</h2>
+        <p style="text-align: center; opacity: 0.8;">How we turn Reddit searches into Coaching Clients.</p>
+
+        <div class="funnel-container">
+            <!-- Node 1 -->
+            <div class="funnel-node">
+                <h3>Reddit / YouTube</h3>
+                <p>Dad asks: "How to coparent?"</p>
+                <div class="tooltip">Targeting 50+ Communities & Keywords</div>
+            </div>
+            <!-- Node 2 -->
+            <div class="funnel-node" style="border-color: var(--secondary-neon);">
+                <h3>High-Value Post</h3>
+                <p>Your Article / Video</p>
+                <div class="tooltip">20 Articles/Month (Tier 2)</div>
+            </div>
+            <!-- Node 3 -->
+            <div class="funnel-node">
+                <h3>Site CTA</h3>
+                <p>"Book Free Call"</p>
+                <div class="tooltip">Conversion Optimized Layout</div>
+            </div>
+            <!-- Node 4 -->
+            <div class="funnel-node" style="border-color: #00ff88; box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);">
+                <h3>$$ Client $$</h3>
+                <p>Coaching / Skool</p>
+                <div class="tooltip">Revenue & Retention</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 3: Pricing Flip Cards -->
+    <section id="offer" class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Choose Your Domination Path</h2>
+
+        <div class="pricing-grid">
+
+            <!-- Tier 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Option 1: Content Foundation</h3>
+                        <div class="price">$1,500</div>
+                        <p>One-Time Injection</p>
+                        <ul style="text-align: left; opacity: 0.8; list-style: none; padding: 0;">
+                            <li>✓ 10 Service Pages</li>
+                            <li>✓ 20 Scheduled Blogs</li>
+                            <li>✓ Speed Fix (LCP < 2s)</li>
+                        </ul>
+                        <span style="margin-top: auto; color: var(--secondary-neon);">Hover for ROI →</span>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>ROI Expectation</h3>
+                        <div class="roi-stat">100+ New Keywords</div>
+                        <p>You own 30 permanent assets.</p>
+                        <p>Perfect for fixing the foundations.</p>
+                        <a href="mailto:deloar@example.com?subject=Start Option 1" class="cta-button">Select Option
+                            1</a>
                     </div>
                 </div>
-                <div class="image-wrapper after-image" id="afterImage1"
-                    style="background-image: url('divorced_dads_redesign_mockup_1765367943539.png');"></div>
-                <div class="slider-handle" id="sliderHandle1"></div>
-                <input type="range" min="0" max="100" value="50" oninput="updateSlider(1, this.value)">
             </div>
 
-            <div class="tier-pricing">
-                <ul class="features-list">
-                    <li>Full Technical Speed Fix</li>
-                    <li><strong>10 Core Service Pages</strong></li>
-                    <li><strong>20 Scheduled Blog Posts</strong></li>
-                    <li>Google Analytics & Console Setup</li>
-                    <li><strong>Goal: 100+ New Keywords</strong></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tier 2 (Highlighted) -->
-    <div class="tier-section tier-highlight">
-        <div class="container">
-            <div class="tier-header">
-                <span class="badge badge-popular">Most Popular</span>
-                <h2 style="font-size: 2.5rem; color: var(--primary-neon);">Option 2: Volume Dominance</h2>
-                <div class="price">$900 <span>/ month</span></div>
-                <p class="neon-text" style="font-size: 1.2rem;">Daily Publishing Powerhouse</p>
-            </div>
-
-            <div class="slider-container" id="slider2"
-                style="border: 2px solid var(--secondary-neon); box-shadow: 0 0 40px rgba(188, 19, 254, 0.3);">
-                <div class="image-wrapper before-image"
-                    style="background-image: url('before_site_proxy_1765570497005.png'); background-size: cover; background-position: top center;">
-                    <div style="position: absolute; top: 1rem; left: 1rem;">
-                        <span class="badge badge-red">LCP: 4.2s (Current)</span>
-                        <h3
-                            style="background: rgba(0,0,0,0.7); padding: 0.2rem 0.5rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem;">
-                            Current Site</h3>
+            <!-- Tier 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front"
+                        style="border: 2px solid var(--secondary-neon); box-shadow: 0 0 20px rgba(188, 19, 254, 0.2);">
+                        <span class="badge badge-popular">Most Popular</span>
+                        <h3>Option 2: Volume Dominance</h3>
+                        <div class="price">$900<span style="font-size: 1rem;">/mo</span></div>
+                        <p>Growth Partner</p>
+                        <ul style="text-align: left; opacity: 0.8; list-style: none; padding: 0;">
+                            <li>✓ <strong>20 Articles / Month</strong></li>
+                            <li>✓ Daily Publishing</li>
+                            <li>✓ "Search Everywhere" Setup</li>
+                        </ul>
+                        <span style="margin-top: auto; color: var(--secondary-neon);">Hover for Strategy →</span>
+                    </div>
+                    <div class="flip-card-back" style="background: rgba(188, 19, 254, 0.2);">
+                        <h3>Explosive Growth</h3>
+                        <div class="roi-stat">4x Publishing Velocity</div>
+                        <p>Compounding traffic growth.</p>
+                        <p>We become your full-time content team.</p>
+                        <a href="mailto:deloar@example.com?subject=Start Tier 2 Growth" class="cta-button">Start Growth
+                            Partner</a>
                     </div>
                 </div>
-                <div class="image-wrapper after-image" id="afterImage2"
-                    style="background-image: url('divorced_dads_redesign_mockup_1765367943539.png');"></div>
-                <div class="slider-handle" id="sliderHandle2"
-                    style="background: var(--secondary-neon); box-shadow: 0 0 20px var(--secondary-neon);"></div>
-                <input type="range" min="0" max="100" value="50" oninput="updateSlider(2, this.value)">
             </div>
 
-            <div class="tier-pricing"
-                style="background: rgba(188, 19, 254, 0.1); border: 1px solid var(--secondary-neon);">
-                <ul class="features-list">
-                    <li><strong>20 New Articles / Month</strong></li>
-                    <li>"Search Everywhere" Optimization</li>
-                    <li>Topic Cluster Strategy</li>
-                    <li>Publishing every weekday</li>
-                    <li><strong>Goal: Compounding Traffic</strong></li>
-                </ul>
-                <a href="#" class="cta-button"
-                    style="background: linear-gradient(90deg, var(--secondary-neon), var(--primary-neon)); font-size: 1.2rem; padding: 1.2rem;">Start
-                    Volume Dominance</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tier 3 -->
-    <div class="tier-section">
-        <div class="container">
-            <div class="tier-header">
-                <h2>Option 3: Conversion Authority</h2>
-                <div class="price">$1,000 <span>/ month</span></div>
-                <p class="neon-text">High-Value Assets & Sales</p>
-            </div>
-
-            <div class="slider-container" id="slider3">
-                <div class="image-wrapper before-image"
-                    style="background-image: url('before_site_proxy_1765570497005.png'); background-size: cover; background-position: top center;">
-                    <div style="position: absolute; top: 1rem; left: 1rem;">
-                        <span class="badge badge-red">LCP: 4.2s (Current)</span>
-                        <h3
-                            style="background: rgba(0,0,0,0.7); padding: 0.2rem 0.5rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem;">
-                            Current Site</h3>
+            <!-- Tier 3 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Option 3: Conversion Authority</h3>
+                        <div class="price">$1,000<span style="font-size: 1rem;">/mo</span></div>
+                        <p>Aggressive Scale</p>
+                        <ul style="text-align: left; opacity: 0.8; list-style: none; padding: 0;">
+                            <li>✓ 15 Premium Assets</li>
+                            <li>✓ Sales Pages & Case Studies</li>
+                            <li>✓ CRO & A/B Testing</li>
+                        </ul>
+                        <span style="margin-top: auto; color: var(--secondary-neon);">Hover for Metrics →</span>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Sales Focus</h3>
+                        <div class="roi-stat">+50% Conversion Rate</div>
+                        <p>Turning visitors into high-ticket clients.</p>
+                        <p>Maximized for Coaching Calls.</p>
+                        <a href="mailto:deloar@example.com?subject=Start Tier 3 Scale" class="cta-button">Start
+                            Scaling</a>
                     </div>
                 </div>
-                <div class="image-wrapper after-image" id="afterImage3"
-                    style="background-image: url('divorced_dads_redesign_mockup_1765367943539.png');"></div>
-                <div class="slider-handle" id="sliderHandle3"></div>
-                <input type="range" min="0" max="100" value="50" oninput="updateSlider(3, this.value)">
             </div>
 
-            <div class="tier-pricing">
-                <ul class="features-list">
-                    <li><strong>15 Premium Assets / Month</strong></li>
-                    <li>Sales Pages & Case Studies</li>
-                    <li>Conversion Rate Optimization (CRO)</li>
-                    <li>Competitor Analysis</li>
-                    <li><strong>Goal: Maximize Calls Booked</strong></li>
-                </ul>
+        </div>
+    </section>
+
+    <!-- Module 4: Polish (Testimonials) -->
+    <section class="container" style="margin-bottom: 4rem;">
+        <h2 style="text-align: center;">Partnership Vision</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                "The funnel strategy doubled my qualified leads in 3 months. It's not just SEO, it's a sales engine."
+                <div class="testimonial-author">- Future Case Study Result</div>
+            </div>
+            <div class="testimonial-card">
+                "We stopped chasing clients and started attracting them through Reddit and YouTube authority."
+                <div class="testimonial-author">- Niche Growth Goal</div>
+            </div>
+            <div class="testimonial-card">
+                "Finally, a system that focuses on booked calls, not just 'traffic' vanity metrics."
+                <div class="testimonial-author">- Matteo's Success</div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container funnel-section">
-        <h2>The Strategy: "Search Everywhere"</h2>
-        <p>Capturing dads wherever they are looking for help.</p>
-        <img src="search_everywhere_funnel_graphic_1765367972731.png" alt="Search Everywhere Funnel"
-            class="funnel-graphic">
-    </div>
+    <footer style="text-align: center; padding: 2rem; opacity: 0.6; border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2025 Transformation Proposal for DivorcedDadsHelp.com</p>
+        <p>Built with Antigravity AI.</p>
+    </footer>
 
     <script>
         function updateSlider(id, val) {
@@ -149,7 +207,6 @@
             document.getElementById('sliderHandle' + id).style.left = val + '%';
         }
     </script>
-
 </body>
 
 </html>
